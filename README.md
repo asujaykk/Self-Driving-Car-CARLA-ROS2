@@ -42,15 +42,15 @@ Also can control the vehicle with API/ ROS bridge
 3. CARLA 9.15.0 simulator installed
 4. CARLA ROS2 bridge installed
 
-# PHASE-1
+# PHASE-1  : A SIMPLE ROUTE FOLLOWING VEHICLE (WAYPOINT FOLLOWER)
 1. In this phase, the basic objective of a self driving car will be implemented
 2. The basic objective is to drive a car from a starting point to a destination point.
 3. Here we are not bothering about collirtions, traffic rules or complex menuvers
 
 ## how to achieve this
 1. Get the complete road map of CARLA WORLD,, which is equivalent to google map.
-2. Spawn a vehicle in simulator.
-3. Create An HMI to select destination location in the map.
+2. Spawn a vehicle.
+3. Use Navigatiobn HMI to select destination location in the map.
 4. Use route planner to find the best route from vehicle location to destination point.
 5. Also run the controller to control the vehicle to follow the route
 
@@ -61,20 +61,33 @@ open a new terminal (terminal 1) and run following command to start carla server
 
        bash <CARLA_EXECUTABLE_DIRECTORY>/CarlaUE4.sh  -prefernvidia
    
-3. Source ROS2 HUMBLE
+2. Source ROS2 HUMBLE
 open a new terminal(terminal 2) and run following command to source ROS2
 
        source /opt/ros/humble/setup.bash
-4. Source ROS2 CARLA Bridge
+3. Source ROS2 CARLA Bridge
 In terminal 2 , run following command
  
         source /home/akhil_msi/Workspace/ros-bridge/install/setup.bash
         export CARLA_ROOT=/home/akhil_msi/WORKING_FOLDER/CARLA_0.9.15
         export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
    
-6. Spawn example ego vehicle
-7. 
+#### 2. Spawn a vehicle
+1. use ROS2 package to spawn a vehicle. 
+In terminal 2 , run following command
 
+       ros2 launch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch.py
 
+#### 3. Use Navigatiobn HMI to select destination location in the map. 
+1. Source navigation package
+   Open a new terminal (terminal 3) and run following command
+       
+         source install/setup.bash
+2. Run navigation node with following command
 
+          ros2 run navigation navigation_hmi
+3. Open a new terminal (terminal 4) and run following command to open rviz2
 
+          rviz2
+5. Select marker to show carla_road_network topic.
+6. Select  
