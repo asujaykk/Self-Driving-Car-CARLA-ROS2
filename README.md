@@ -112,7 +112,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 
 
 
-### 1. Start **CARLA server** and source  CARLA ROS2 bridge. 
+### 1. 🌍 Start **CARLA server** and source  CARLA ROS2 bridge. 
 1.  **Run the CARLA server.**
     Open a new terminal (terminal 1) and run the following command to start the CARLA server:
 
