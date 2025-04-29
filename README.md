@@ -8,7 +8,7 @@ Here, we are aiming to build a software stack step by step to **drive a car in t
 2.  **ROS2 Humble**
 3.  **CARLA 0.9.15.0**
 4.  **CARLA ROS2 HUMBLE bridge**
-5.  **Python 3.12.0**
+5.  **Python 3.10.12**
 
 ## 🤔 What is a self-driving car?
 
@@ -39,17 +39,20 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 ## ⚠️ Prerequisite
 1.  A PC with **Ubuntu 22.04 OS** installed (with dedicated graphics).
 2.  **ROS2 Humble** installed.
+
     Follow the official page of ROS2 for installation: [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
-3.  **CARLA 0.9.15.0 simulator** installed.
+4.  **CARLA 0.9.15.0 simulator** installed.
+
     Download the binary installation file from the CARLA official GitHub page and extract it to your PC.
-4.  **CARLA ROS2 bridge** installed.
-    Follow the following link for CARLA ROS2 bridge installation: [https://github.com/ttgamage/carla-ros-bridge](https://github.com/ttgamage/carla-ros-bridge)
-5.  Install this repository to your **WORKING DIRECTORY**:
+6.  **CARLA ROS2 bridge** installed.
+
+    Follow the link for CARLA ROS2 bridge installation: [https://github.com/ttgamage/carla-ros-bridge](https://github.com/ttgamage/carla-ros-bridge)
+8.  Install this repository to your **WORKING DIRECTORY**:
 
     ```bash
     git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git
     ```
-6.  Build the package and source it:
+9.  Build the package and source it:
 
     ```bash
     cd Self-Driving-Car-CARLA-ROS2
