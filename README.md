@@ -194,7 +194,8 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     ```
 
 4.  Select the `carla_road_network` topic to **visualize the road network** in RViz 2.
-5.  Select the `carla/hero/marker` topic to **visualize the vehicle** in RViz 2.
-6.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
-7.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
-8.  And at this moment, the **vehicle will start driving towards this location**.
+5.  Select the `/markers` topic to **visualize the vehicle** in RViz 2.
+6.  Select the `/waypoints` topic to **Visualize the published route** in Rviz 2.
+7.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
+8.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
+9.  And at this moment, the **vehicle will start driving towards this location**.
