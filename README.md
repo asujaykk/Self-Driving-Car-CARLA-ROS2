@@ -103,7 +103,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 3.  Here, we are **not bothering about collisions, traffic rules, or complex maneuvers**.
 
 ### 🕹️ Step-by-step operation to do it with CARLA, ROS2, CARLA ROS2 bridge
-1.  Get the **complete road map of the CARLA WORLD**, which is equivalent to Google Maps.
+1.  Start **CARLA server** and source  CARLA ROS2 bridge. 
 2.  **Spawn a vehicle**.
 3.  Use a **route planner** to find the best route from the vehicle's location to the destination point.
 4.  Use a **controller** to control the vehicle to follow the route.
@@ -112,12 +112,12 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 
 
 
-### 1. 🗺️ Get the complete road map of the CARLA WORLD, which is equivalent to Google Maps.
+### 1. Start **CARLA server** and source  CARLA ROS2 bridge. 
 1.  **Run the CARLA server.**
     Open a new terminal (terminal 1) and run the following command to start the CARLA server:
 
     ```bash
-    bash <CARLA_EXECUTABLE_DIRECTORY>/CarlaUE4.sh -prefernvidia
+    bash CARLA_PROJECT/CARLA_0.9.15/CarlaUE4.sh -prefernvidia
     ```
 
 2.  **Source ROS2 HUMBLE.**
@@ -131,8 +131,8 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     In terminal 2, run the following command:
 
     ```bash
-    source /home/akhil_msi/Workspace/ros-bridge/install/setup.bash
-    export CARLA_ROOT=/home/akhil_msi/WORKING_FOLDER/CARLA_0.9.15
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
     export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
     ```
 
@@ -149,6 +149,10 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     To initiate the waypoint publisher, run the following command in a new terminal (terminal 3):
 
     ```bash
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
     ros2 launch carla_waypoint_publisher carla_waypoint_publisher.launch.py
     ```
 
@@ -157,6 +161,10 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     To initiate the local planner, please run the following command from a new terminal (terminal 4) as follows:
 
     ```bash
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
     ros2 run carla_ad_agent local_planner
     ```
 
@@ -166,7 +174,11 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Open a new terminal (terminal 5) and run the following command:
 
     ```bash
-    source install/setup.bash
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+    source  CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ```
 
 2.  **Run the navigation node** with the following command:
