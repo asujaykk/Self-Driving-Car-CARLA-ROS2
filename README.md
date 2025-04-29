@@ -72,8 +72,8 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Set up ROS environment and install dependencies.
 
            source /opt/ros/humble/setup.bash
-            rosdep update
-            rosdep install --from-paths src --ignore-src -r
+           rosdep update
+           rosdep install --from-paths src --ignore-src -r
     Build the ROS bridge workspace using colcon.
   
            colcon build --symlink-install
@@ -90,7 +90,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Build the package and source it:
 
     ```bash
-    cd Self-Driving-Car-CARLA-ROS2
+    cd ..
     colcon build
     source install/setup.bash
     ```
