@@ -50,9 +50,9 @@ Also can control the vehicle with API/ ROS bridge
 ## how to achieve this
 1. Get the complete road map of CARLA WORLD,, which is equivalent to google map.
 2. Spawn a vehicle.
-3. Use Navigatiobn HMI to select destination location in the map.
-4. Use route planner to find the best route from vehicle location to destination point.
-5. Also run the controller to control the vehicle to follow the route
+3. Use route planner to find the best route from vehicle location to destination point.
+4. Use a controller to control the vehicle to follow the route
+5. Use Navigatiobn HMI to select destination location in the map.
 
 ### Step by step operation to do it with CARLA , ROS2 , CARLA ROS2 bridge
 #### 1.Get the complete road map of CARLA WORLD,, which is equivalent to google map.
@@ -78,16 +78,36 @@ In terminal 2 , run following command
 
        ros2 launch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch.py
 
-#### 3. Use Navigatiobn HMI to select destination location in the map. 
+#### 3. Use route planner to find the best route from vehicle location to destination point.
+1. For route planning we will be using waypoint publisher which is part of ROS2 package.
+   to initiate waypoint publisher run following command in a new terminal (terminal 3)
+
+        ros2 launch carla_waypoint_publisher carla_waypoint_publisher.launch.py  
+
+#### 4. Use a controller to control the vehicle to follow the route
+1. We will be using the local planner package in carla ros2 bridge For controlling the vehicle or to follow the published waypoints (route) in carla.
+   To initate the local planner please run the following command from a new terminal (terminal 4) as follows,
+
+          ros2 run carla_ad_agent local_planner
+
+
+#### 5. Use Navigatiobn HMI to select destination location in the map. 
 1. Source navigation package
-   Open a new terminal (terminal 3) and run following command
+   Open a new terminal (terminal 5) and run following command
        
          source install/setup.bash
 2. Run navigation node with following command
 
           ros2 run navigation navigation_hmi
-3. Open a new terminal (terminal 4) and run following command to open rviz2
+3. Open a new terminal (terminal 6) and run following command to open rviz2
 
           rviz2
-5. Select marker to show carla_road_network topic.
-6. Select  
+5. select the carla_road_network topic to visualize the road network in rviz2
+6. select carla\here\marker topic to visualize the vehicle in rviz2
+7. Now chose goal pose option to select the destination point in the road network.
+8. Once you select the goal pose, you can see the new route created by waypoint publisher in the map
+9. And at this moment the vehicle will start driving towwards this location.
+
+
+
+           
