@@ -37,10 +37,23 @@ And we can read the sensor data from this vehicle with python API/ ROS bridge.
 Also can control the vehicle with API/ ROS bridge
 
 # Prerequisite
-1. A PC with ubuntu 22.04 OS installed (with dedicated graphics)
-2. ROS2 Humble installed
-3. CARLA 9.15.0 simulator installed
-4. CARLA ROS2 bridge installed
+1. A PC with ubuntu 22.04 OS installed (with dedicated graphics).
+2. ROS2 Humble installed.
+   follow official page of ROS2 for installation https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
+4. CARLA 9.15.0 simulator installed
+   download the binary installation file from CARLA offcial github page, extract it in to your PC
+6. CARLA ROS2 bridge installed
+   follow following link for CARLA ROS2 bridge installation https://github.com/ttgamage/carla-ros-bridge
+7. Install this repository to your WORKING DIRECTORY
+
+          git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git
+8. build the package and source it
+
+          cd Self-Driving-Car-CARLA-ROS2
+          colcon build
+          source install/setup.bash
+
+
 
 # PHASE-1  : A SIMPLE ROUTE FOLLOWING VEHICLE (WAYPOINT FOLLOWER)
 1. In this phase, the basic objective of a self driving car will be implemented
