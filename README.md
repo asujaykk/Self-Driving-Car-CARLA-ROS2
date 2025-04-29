@@ -43,16 +43,51 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Follow the official page of ROS2 for installation: [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 4.  **CARLA 0.9.15.0 simulator** installed.
 
-    Download the binary installation file from the CARLA official GitHub page and extract it to your PC.
+    create A folder named 'CARLA_PROJECT' for all data
+    
+        mkdir CARLA_PROJECT
+    create workspace folder for carla ros2 bridge
+
+        mkdir CARLA_PROJECT/ros2_bridge_ws
+    create workspace folder for our project software
+
+        mkdir CARLA_PROJECT/carla_ros2_ws
+    
+    Download the binary installation file from the CARLA official GitHub page and extract it to your CARLA_PROJECT folder.
+
+        cd CARLA_PROJECT
+        wget wget https://carla-releases.s3.us-east-005.backblazeb2.com/Linux/CARLA_0.9.15.tar.gz
+        mkdir  CARLA_0.9.15 
+        tar -xzvf CARLA_0.9.15.tar.gz -C CARLA_0.9.15
+   
+    
 6.  **CARLA ROS2 bridge** installed.
 
     Follow the link for CARLA ROS2 bridge installation: [https://github.com/ttgamage/carla-ros-bridge](https://github.com/ttgamage/carla-ros-bridge)
-8.  Install this repository to your **WORKING DIRECTORY**:
+    Open a new terminal and clone the repository
 
+           mkdir -p ~/CARLA_PROJECT/ros2_bridge_ws/ros-bridge && cd ~/CARLA_PROJECT/ros2_bridge_ws/ros-bridge
+            git clone --recurse-submodules https://github.com/ttgamage/carla-ros-bridge.git
+            mv carla-ros-bridge src
+    Set up ROS environment and install dependencies.
+
+           source /opt/ros/humble/setup.bash
+            rosdep update
+            rosdep install --from-paths src --ignore-src -r
+    Build the ROS bridge workspace using colcon.
+  
+           colcon build --symlink-install
+7.  Install this repository to your **WORKING DIRECTORY**:
+   
+    Open a new terminal and navigate to 'CARLA_PROJECT/carla_ros2_ws' folder
     ```bash
+    cd CARLA_PROJECT/carla_ros2_ws
+    mkdir src
+    cd src
     git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git
+    
     ```
-9.  Build the package and source it:
+    Build the package and source it:
 
     ```bash
     cd Self-Driving-Car-CARLA-ROS2
