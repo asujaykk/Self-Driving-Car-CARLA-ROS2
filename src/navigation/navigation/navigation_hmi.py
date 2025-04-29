@@ -3,6 +3,8 @@ from rclpy.node import Node
 from visualization_msgs.msg import Marker, MarkerArray
 import carla
 from geometry_msgs.msg import PoseWithCovarianceStamped, PoseStamped
+from std_msgs.msg import Float64
+from rclpy.qos import QoSProfile, DurabilityPolicy
 
 class CarlaMapPublisher(Node):
     def __init__(self):
@@ -19,6 +21,10 @@ class CarlaMapPublisher(Node):
 
         self.publisher_ = self.create_publisher(MarkerArray, 'carla_road_network', 10)
         self.goal_pose_publisher = self.create_publisher(PoseStamped, "/carla/hero/goal_pose", 10)
+        
+        qos_profile = QoSProfile(depth=10,durability=DurabilityPolicy.TRANSIENT_LOCAL)
+        
+        self.control_speed_publisher = self.create_publisher(Float64, '/carla/hero/speed_command',qos_profile)
         self.timer = self.create_timer(1.0, self.timer_callback)
         self.markers = self.create_markers(self.waypoints)
 
@@ -44,7 +50,10 @@ class CarlaMapPublisher(Node):
 
     def goal_pose_callback(self, msg):
          self.get_logger().info(f"Received goal Pose: Position=({msg.pose.position.x}, {msg.pose.position.y}), Orientation=({msg.pose.orientation.z}, {msg.pose.orientation.w})")
-         self.goal_pose_publisher.publish(msg)
+         speed_msg = Float64()
+         speed_msg.data = 20.0   # maintain 20km speed
+         self.control_speed_publisher.publish(speed_msg)  #send  speed of the vehicle to be maintained
+         self.goal_pose_publisher.publish(msg)  # send goal pose to waypoint publisher
          self.get_logger().info(f"published goal" )
  
     def create_markers(self, waypoints):
