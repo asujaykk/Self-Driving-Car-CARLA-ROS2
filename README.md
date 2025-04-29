@@ -67,8 +67,8 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Open a new terminal and clone the repository
 
            mkdir -p ~/CARLA_PROJECT/ros2_bridge_ws/ros-bridge && cd ~/CARLA_PROJECT/ros2_bridge_ws/ros-bridge
-            git clone --recurse-submodules https://github.com/ttgamage/carla-ros-bridge.git
-            mv carla-ros-bridge src
+           git clone --recurse-submodules https://github.com/ttgamage/carla-ros-bridge.git
+           mv carla-ros-bridge src
     Set up ROS environment and install dependencies.
 
            source /opt/ros/humble/setup.bash
@@ -194,7 +194,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     ```
 
 4.  Select the `carla_road_network` topic to **visualize the road network** in RViz 2.
-5.  Select the `carla/here/marker` topic to **visualize the vehicle** in RViz 2.
+5.  Select the `carla/hero/marker` topic to **visualize the vehicle** in RViz 2.
 6.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 7.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
 8.  And at this moment, the **vehicle will start driving towards this location**.
