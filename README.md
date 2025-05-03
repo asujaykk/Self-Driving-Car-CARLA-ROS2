@@ -71,16 +71,18 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
            mv carla-ros-bridge src
     Set up ROS environment and install dependencies.
 
+           conda deactivate
            source /opt/ros/humble/setup.bash
            rosdep update
            rosdep install --from-paths src --ignore-src -r
     Build the ROS bridge workspace using colcon.
   
            colcon build --symlink-install
-7.  Install this repository to your **WORKING DIRECTORY**:
+8.  Install this repository to your **WORKING DIRECTORY**:
    
     Open a new terminal and navigate to 'CARLA_PROJECT/carla_ros2_ws' folder
     ```bash
+    conda deactivate
     cd CARLA_PROJECT/carla_ros2_ws
     mkdir src
     cd src
@@ -124,6 +126,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Open a new terminal (terminal 2) and run the following command to source ROS2:
 
     ```bash
+    conda deactivate
     source /opt/ros/humble/setup.bash
     ```
 
@@ -149,6 +152,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     To initiate the waypoint publisher, run the following command in a new terminal (terminal 3):
 
     ```bash
+    conda deactivate
     source /opt/ros/humble/setup.bash
     source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
     export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
@@ -161,6 +165,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     To initiate the local planner, please run the following command from a new terminal (terminal 4) as follows:
 
     ```bash
+    conda deactivate
     source /opt/ros/humble/setup.bash
     source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
     export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
@@ -174,6 +179,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Open a new terminal (terminal 5) and run the following command:
 
     ```bash
+    conda deactivate
     source /opt/ros/humble/setup.bash
     source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
     export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
@@ -190,12 +196,14 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 3.  **Launch RViz 2** in a new terminal (terminal 6):
 
     ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash    
     rviz2
     ```
 
 4.  Select the `carla_road_network` topic to **visualize the road network** in RViz 2.
-5.  Select the `/markers` topic to **visualize the vehicle** in RViz 2.
-6.  Select the `/waypoints` topic to **Visualize the published route** in Rviz 2.
+5.  Select the `carla/markers` topic to **visualize the vehicle** in RViz 2.
+6.  Select the `carla/waypoints` topic to **Visualize the published route** in Rviz 2.
 7.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 8.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
 9.  And at this moment, the **vehicle will start driving towards this location**.
