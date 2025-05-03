@@ -207,3 +207,6 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 7.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 8.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
 9.  And at this moment, the **vehicle will start driving towards this location**.
+
+## Video tutorial
+https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
