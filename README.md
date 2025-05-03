@@ -6,7 +6,7 @@ Here, we are aiming to build a software stack step by step to **drive a car in t
 ## ⚙️ Software Requirements
 1.  **Ubuntu 22.04**
 2.  **ROS2 Humble**
-3.  **CARLA 0.9.15.0**
+3.  **CARLA 0.9.15**
 4.  **CARLA ROS2 HUMBLE bridge**
 5.  **Python 3.10.12**
 
