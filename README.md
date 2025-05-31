@@ -113,5 +113,5 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 
 Please follow procedure mentioned in [PHASE-1_readme.MD](https://github.com/asujaykk/Self-Driving-Car-CARLA-ROS2/blob/main/PHASE-1_readme.MD)
 
-## Video tutorial
+### Video tutorial
 https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
