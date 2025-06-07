@@ -115,3 +115,21 @@ Please follow procedure mentioned in [PHASE-1_readme.MD](https://github.com/asuj
 
 ### Video tutorial
 https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
+
+
+## 🚦 PHASE-2: Implementing Collsion avoidance.
+1.  The waypoint following vehicle in phase-1 do not avoid collisons and traffic rules.
+2.  In Phase-2 we will add **collision avoidance control to the vehicle**.
+
+### 🕹️ Step-by-step operation to do it with CARLA, ROS2, CARLA ROS2 bridge
+1.  Start **CARLA server** and source  CARLA ROS2 bridge. 
+2.  **Spawn a vehicle**.
+3.  Use a **route planner** to find the best route from the vehicle's location to the destination point.
+4.  Use a **controller** to control the vehicle to follow the route.
+5.  Use **Navigation HMI** to select the destination location on the map.
+6.  use **collision monitor** module to monitor frontal collision and control the vehicle to avoid it.
+
+Please follow procedure mentioned in PHASE-2_readme.MD
+
+### Video tutorial
+
