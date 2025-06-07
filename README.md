@@ -117,8 +117,8 @@ Please follow procedure mentioned in [PHASE-1_readme.MD](https://github.com/asuj
 https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
 
 
-## 🚦 PHASE-2: Implementing Collsion avoidance.
-1.  The waypoint following vehicle in phase-1 do not avoid collisons and traffic rules.
+## 🚦 PHASE-2: Implementing Collision avoidance.
+1.  The waypoint following vehicle in phase-1 do not avoid collisions and traffic rules.
 2.  In Phase-2 we will add **collision avoidance control to the vehicle**.
 
 ### 🕹️ Step-by-step operation to do it with CARLA, ROS2, CARLA ROS2 bridge
