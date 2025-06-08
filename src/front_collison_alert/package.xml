@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>navigation</name>
+  <name>front_collison_alert</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="akhil_msi@todo.todo">akhil_msi</maintainer>
+  <maintainer email="akhillmsi@.com">akhil_msi</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>
