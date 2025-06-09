@@ -117,7 +117,7 @@ Please follow procedure mentioned in [PHASE-1_readme.MD](https://github.com/asuj
 https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
 
 
-## 🚦 PHASE-2: Implementing Collision avoidance.
+## 🚦 PHASE-2: Add collision avoidance feature to the EGO VEHICLE.
 1.  The waypoint following vehicle in phase-1 do not avoid collisions and traffic rules.
 2.  In Phase-2 we will add **collision avoidance control to the vehicle**.
 
@@ -129,7 +129,7 @@ https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
 5.  Use **Navigation HMI** to select the destination location on the map.
 6.  use **collision monitor** module to monitor frontal collision and control the vehicle to avoid it.
 
-Please follow procedure mentioned in PHASE-2_readme.MD
+Please follow procedure mentioned in [PHASE-2_readme.MD](https://github.com/asujaykk/Self-Driving-Car-CARLA-ROS2/blob/main/PHASE-2_readme%20.MD)
 
 ### Video tutorial
 
