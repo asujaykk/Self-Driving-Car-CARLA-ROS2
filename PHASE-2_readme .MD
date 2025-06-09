@@ -1,4 +1,4 @@
-## 🚦 PHASE-2: A SIMPLE ROUTE FOLLOWING VEHICLE (WAYPOINT FOLLOWER)
+## 🚦 PHASE-2: Add collision avoidance feature to the EGO VEHICLE.
 1.  In this phase, we will solve one real world problem of a self driving car: **collision avoidance**.
 2.  The ego vehicle in PHASE-1 is simply following the route. Now we will add another ros2 node for,
     1. For predicting possible frontal colliion
