@@ -1,7 +1,8 @@
-## 🚦 PHASE-1: A SIMPLE ROUTE FOLLOWING VEHICLE (WAYPOINT FOLLOWER)
-1.  In this phase, the **basic objective of a self-driving car will be implemented**.
-2.  The basic objective is to **drive a car from a starting point to a destination point**.
-3.  Here, we are **not bothering about collisions, traffic rules, or complex maneuvers**.
+## 🚦 PHASE-2: A SIMPLE ROUTE FOLLOWING VEHICLE (WAYPOINT FOLLOWER)
+1.  In this phase, we will solve one real world problem of a self driving car: **collision avoidance**.
+2.  The ego vehicle in PHASE-1 is simply following the route. Now we will add another ros2 node for,
+    1. For predicting possible frontal colliion
+    2. For intitating required breaking/EMERGENCY BREAKING to to avoid collision
 
 ### 🕹️ Step-by-step operation to do it with CARLA, ROS2, CARLA ROS2 bridge
 1.  Get the **complete road map of the CARLA WORLD**, which is equivalent to Google Maps.
@@ -9,8 +10,7 @@
 3.  Use a **route planner** to find the best route from the vehicle's location to the destination point.
 4.  Use a **controller** to control the vehicle to follow the route.
 5.  Use **Navigation HMI** to select the destination location on the map.
-
-
+6.  Use **Frontal collision monitor** module to monitor and alert about possible collision. and initiate Automatic emergency breaking to avoid collisions.
 
 
 ### 1. 🗺️ Get the complete road map of the CARLA WORLD, which is equivalent to Google Maps.
