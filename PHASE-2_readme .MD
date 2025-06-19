@@ -78,10 +78,10 @@
         source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ```
 
-2.  **Run the navigation node** with the following command:
+2.  **Run the navigation node** with the following command (disable publishing the speed command):
 
     ```bash
-       ros2 run navigation navigation_hmi
+       ros2 run navigation navigation_hmi  --ros-args -p enable_spd_cmd:=false
     ```
 
 3.  **Launch RViz 2** in a new terminal (terminal 6):
