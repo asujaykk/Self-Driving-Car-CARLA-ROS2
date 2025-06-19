@@ -15,7 +15,11 @@ class CarlaMapPublisher(Node):
         self.client.set_timeout(10.0)
         self.world = self.client.get_world()
         self.map = self.world.get_map()
-
+        
+        #enable speed command 
+        self.declare_parameter('enable_spd_cmd', True)
+        self.enable_spd_cmd = self.get_parameter('enable_spd_cmd').get_parameter_value().bool_value
+        
         # Generate waypoints every 2 meters
         self.waypoints = self.map.generate_waypoints(0.7)
 
@@ -50,9 +54,18 @@ class CarlaMapPublisher(Node):
 
     def goal_pose_callback(self, msg):
          self.get_logger().info(f"Received goal Pose: Position=({msg.pose.position.x}, {msg.pose.position.y}), Orientation=({msg.pose.orientation.z}, {msg.pose.orientation.w})")
+         #only send speed command if speed command enabled
          speed_msg = Float64()
-         speed_msg.data = 20.0   # maintain 20km speed
-         self.control_speed_publisher.publish(speed_msg)  #send  speed of the vehicle to be maintained
+         #speed_msg.data = 20.0   # maintain 20km speed
+         if self.enable_spd_cmd:
+            speed_msg.data = 20.0
+            self.control_speed_publisher.publish(speed_msg)  #send  speed of the vehicle to be maintained
+            self.get_logger().info(f"published spd command 20" )
+         else:
+            speed_msg.data = 0.0
+            self.control_speed_publisher.publish(speed_msg)  #send  speed of the vehicle to be maintained   
+            self.get_logger().info(f"published spd command 0" )
+                    
          self.goal_pose_publisher.publish(msg)  # send goal pose to waypoint publisher
          self.get_logger().info(f"published goal" )
  
