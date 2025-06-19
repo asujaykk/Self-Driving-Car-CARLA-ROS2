@@ -5,12 +5,15 @@
     2. Intitating required breaking/EMERGENCY BREAKING to to avoid collision
 
 ### 🕹️ Step-by-step operation to do it with CARLA, ROS2, CARLA ROS2 bridge
-1.  Create **custom vehicle definition file**, and add required sensors for collision avoidance system.
-2.  Follow all steps in PHASE-1, and use **custom vehicle definition file** while spawing a vehicle.
-3.  Create and use **Frontal collision monitor** module to monitor and alert about possible collision. and initiate Automatic emergency breaking to avoid collisions.
+1.  Start **CARLA server** and source  CARLA ROS2 bridge. 
+2.  **Spawn a vehicle** with custom vehicle definition file.
+3.  Use a **route planner** to find the best route from the vehicle's location to the destination point.
+4.  Use a **controller** to control the vehicle to follow the route.
+5.  Use **Navigation HMI** to select the destination location on the map.
 
 
-### 1. 🗺️ Get the complete road map of the CARLA WORLD, which is equivalent to Google Maps.
+
+### 1. 🌍 Start CARLA server.
 1.  **Run the CARLA server.**
     Open a new terminal (terminal 1) and run the following command to start the CARLA server:
 
@@ -19,7 +22,7 @@
     ```
 
 
-### 2. 🚗 Spawn a vehicle
+### 2. 🚗 Spawn a vehicle with custom vehicle definition file.
 1.  Use a **ROS2 package to spawn a vehicle**. with custom vehicle definition file **car_definition_file.json**
     In terminal 2, run the following command in a new terminal (terminal 2):
 
