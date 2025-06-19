@@ -18,15 +18,10 @@
     bash <CARLA_EXECUTABLE_DIRECTORY>/CarlaUE4.sh -prefernvidia
     ```
 
-2.  **Source ROS2 HUMBLE.**
-    Open a new terminal (terminal 2) and run the following command to source ROS2:
 
-    ```bash
-    source /opt/ros/humble/setup.bash
-    ```
-
-3.  **🔗 Source the ROS2 CARLA Bridge.**
-    In terminal 2, run the following command:
+### 2. 🚗 Spawn a vehicle
+1.  Use a **ROS2 package to spawn a vehicle**. with custom vehicle definition file **car_definition_file.json**
+    In terminal 2, run the following command in a new terminal (terminal 2):
 
     ```bash
     conda deactivate
@@ -35,13 +30,6 @@
     export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
     export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
     source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
-    ```
-
-### 2. 🚗 Spawn a vehicle
-1.  Use a **ROS2 package to spawn a vehicle**. with custom vehicle definition file **car_definition_file.json**
-    In terminal 2, run the following command:
-
-    ```bash
     ros2 launch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch.py objects_definition_file:=$HOME/CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2/car_definition_file.json
     ```
 
