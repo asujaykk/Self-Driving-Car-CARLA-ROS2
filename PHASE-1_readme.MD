@@ -83,7 +83,7 @@
     source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
     export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
     export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
-    source  CARLA_PROJECT/carla_ros2_ws/install/setup.bash
+    source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ```
 
 2.  **Run the navigation node** with the following command:
