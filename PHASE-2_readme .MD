@@ -39,7 +39,7 @@
     In terminal 2, run the following command:
 
     ```bash
-    ros2 launch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch.py
+    ros2 launch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch.py objects_definition_file:=$HOME/CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2/car_definition_file.json
     ```
 
 ### 3. 🧭 Use a route planner to find the best route from the vehicle's location to the destination point.
