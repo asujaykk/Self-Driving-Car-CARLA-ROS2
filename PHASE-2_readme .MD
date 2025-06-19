@@ -29,9 +29,12 @@
     In terminal 2, run the following command:
 
     ```bash
-    source /home/akhil_msi/Workspace/ros-bridge/install/setup.bash
-    export CARLA_ROOT=/home/akhil_msi/WORKING_FOLDER/CARLA_0.9.15
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
     export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+    source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ```
 
 ### 2. 🚗 Spawn a vehicle
@@ -47,6 +50,12 @@
     To initiate the waypoint publisher, run the following command in a new terminal (terminal 3):
 
     ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+    source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ros2 launch carla_waypoint_publisher carla_waypoint_publisher.launch.py
     ```
 
@@ -55,6 +64,12 @@
     To initiate the local planner, please run the following command from a new terminal (terminal 4) as follows:
 
     ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+    source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ros2 run carla_ad_agent local_planner
     ```
 
@@ -64,18 +79,25 @@
     Open a new terminal (terminal 5) and run the following command:
 
     ```bash
-    source install/setup.bash
+        conda deactivate
+        source /opt/ros/humble/setup.bash
+        source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+        export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+        export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+        source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
     ```
 
 2.  **Run the navigation node** with the following command:
 
     ```bash
-    ros2 run navigation navigation_hmi
+       ros2 run navigation navigation_hmi
     ```
 
 3.  **Launch RViz 2** in a new terminal (terminal 6):
 
     ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash
     rviz2
     ```
 
