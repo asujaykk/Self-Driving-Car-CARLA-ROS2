@@ -35,7 +35,7 @@
     ```
 
 ### 2. 🚗 Spawn a vehicle
-1.  Use a **ROS2 package to spawn a vehicle**.
+1.  Use a **ROS2 package to spawn a vehicle**. with custom vehicle definition file **car_definition_file.json**
     In terminal 2, run the following command:
 
     ```bash
