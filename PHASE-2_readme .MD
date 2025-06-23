@@ -11,7 +11,7 @@
 4.  Use a **controller** to control the vehicle to follow the route.
 5.  Use **collsion avoidance system** to monitor and avoid frontal collision. 
 6.  Use **Navigation HMI** to select the destination location on the map.
-7.  Use **CARLA PYTHONAPI example** scripts to launch another vehicle in the simulator nd test the behavior of ego vehicle.   
+7.  Use **CARLA PYTHONAPI example** scripts to launch another vehicle in the simulator and test the behavior of ego vehicle.   
 
 ### Clone this repository to your 'CARLA_PROJECT/carla_ros2_ws/src' folder*:
 Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, then remove **Self-Driving-Car-CARLA-ROS2** folder and freshly clone it:
