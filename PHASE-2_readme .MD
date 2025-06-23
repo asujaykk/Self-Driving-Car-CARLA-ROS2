@@ -28,6 +28,7 @@
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
     source install/setup.bash
+
     ```
 
 ### 1. 🌍 Start CARLA server.
