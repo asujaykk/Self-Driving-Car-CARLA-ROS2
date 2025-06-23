@@ -21,7 +21,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
     ```
 
 Open a new terminal and Build the package and source it:
-    ```bash
+    ```bash 
     conda deactivate
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
