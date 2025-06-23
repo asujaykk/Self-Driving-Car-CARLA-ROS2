@@ -129,7 +129,7 @@ Open a new terminal and Build the package and source it:
 6.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 7.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
 
-### 7. 🎯 Use **CARLA pythonapi example** scripts to launch another vehicle in the simulator and test the behavior of ego vehicle. 
+### 7. 🎯 Use **CARLA pythonapi example** scripts to launch another vehicle in the simulator and test the behaviour of ego vehicle. 
 1.  Open a new terminal and create a conda environment for running carla python example script with following command:
 
     ```bash
