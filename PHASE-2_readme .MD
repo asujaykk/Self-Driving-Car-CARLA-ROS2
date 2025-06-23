@@ -18,6 +18,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
     
 
     conda deactivate
+    source /opt/ros/humble/setup.bash
     cd $HOME/CARLA_PROJECT/carla_ros2_ws/src
     rm -rf Self-Driving-Car-CARLA-ROS2
     git clone https://github.com/asujaykk/Self-Driving-Car-CARLA-ROS2.git
@@ -25,9 +26,6 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
 
 Open a new terminal and Build the package and source it:
 
-
-    conda deactivate
-    source /opt/ros/humble/setup.bash
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
     source install/setup.bash
