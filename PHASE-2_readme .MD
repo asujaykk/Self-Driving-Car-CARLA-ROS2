@@ -18,7 +18,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
     conda deactivate
     cd $HOME/CARLA_PROJECT/carla_ros2_ws/src
     rm -rf Self-Driving-Car-CARLA-ROS2
-    git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git 
+    git clone https://github.com/asujaykk/Self-Driving-Car-CARLA-ROS2.git
 
 
 Open a new terminal and Build the package and source it:
