@@ -92,7 +92,9 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Build the package and source it:
 
     ```bash
-    cd ..
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
     source install/setup.bash
     ```
