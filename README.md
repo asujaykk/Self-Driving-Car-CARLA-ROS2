@@ -83,6 +83,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Open a new terminal and navigate to 'CARLA_PROJECT/carla_ros2_ws' folder
     ```bash
     conda deactivate
+    source /opt/ros/humble/setup.bash
     cd CARLA_PROJECT/carla_ros2_ws
     mkdir src
     cd src
@@ -92,8 +93,6 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
     Build the package and source it:
 
     ```bash
-    conda deactivate
-    source /opt/ros/humble/setup.bash
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
     source install/setup.bash
