@@ -9,6 +9,7 @@
 2.  **Spawn a vehicle** with custom vehicle definition file.
 3.  Use a **route planner** to find the best route from the vehicle's location to the destination point.
 4.  Use a **controller** to control the vehicle to follow the route.
+5.  Use **collsion avoidance system** to monitor and avoid frontal collision. 
 5.  Use **Navigation HMI** to select the destination location on the map.
 
 ### Clone this repository to your 'CARLA_PROJECT/carla_ros2_ws/src' folder*:
@@ -81,10 +82,24 @@ Open a new terminal and Build the package and source it:
     ros2 run carla_ad_agent local_planner
     ```
 
+### 5. ⚙️ Use **collsion avoidance system** to monitor and avoid frontal collision.
+1.  We will be using the **collision_avoidance_system**  for monitoring and controlling the vehicle to avoid frontal crash with vehicl and pedestrians.
+    To initiate the collision_monitor_control, please run the following command from a new terminal (terminal 5) as follows:
 
-### 5. 🎯 Use Navigation HMI to select the destination location on the map.
+    ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+    source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
+    ros2 run collision_avoidance_system collision_monitor_control
+    ```
+
+ 
+### 6. 🎯 Use Navigation HMI to select the destination location on the map.
 1.  **Source the navigation package.**
-    Open a new terminal (terminal 5) and run the following command:
+    Open a new terminal (terminal 6) and run the following command:
 
     ```bash
     conda deactivate
@@ -101,7 +116,7 @@ Open a new terminal and Build the package and source it:
     ros2 run navigation navigation_hmi  --ros-args -p enable_spd_cmd:=false
     ```
 
-3.  **Launch RViz 2** in a new terminal (terminal 6):
+3.  **Launch RViz 2** in a new terminal (terminal 7):
 
     ```bash
     conda deactivate
@@ -110,6 +125,6 @@ Open a new terminal and Build the package and source it:
     ```
 
 4.  Select the `carla_road_network` topic to **visualize the road network** in RViz 2.
-5.  Select the `carla/here/marker` topic to **visualize the vehicle** in RViz 2.
+5.  Select the `carla/hero/marker` topic to **visualize the vehicle** in RViz 2.
 6.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 7.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
