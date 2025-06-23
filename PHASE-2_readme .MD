@@ -10,7 +10,8 @@
 3.  Use a **route planner** to find the best route from the vehicle's location to the destination point.
 4.  Use a **controller** to control the vehicle to follow the route.
 5.  Use **collsion avoidance system** to monitor and avoid frontal collision. 
-5.  Use **Navigation HMI** to select the destination location on the map.
+6.  Use **Navigation HMI** to select the destination location on the map.
+7.  Use **CARLA PYTHONAPI example** scripts to launch another vehicle in the simulator nd test the behavior of ego vehicle.   
 
 ### Clone this repository to your 'CARLA_PROJECT/carla_ros2_ws/src' folder*:
 Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, then remove **Self-Driving-Car-CARLA-ROS2** folder and freshly clone it:
@@ -36,7 +37,7 @@ Open a new terminal and Build the package and source it:
     Open a new terminal (terminal 1) and run the following command to start the CARLA server:
 
     ```bash
-    bash <CARLA_EXECUTABLE_DIRECTORY>/CarlaUE4.sh -prefernvidia
+    bash $HOME/CARLA_PROJECT/CARLA_0.9.15/CarlaUE4.sh -prefernvidia
     ```
 
 
@@ -128,3 +129,20 @@ Open a new terminal and Build the package and source it:
 5.  Select the `carla/hero/marker` topic to **visualize the vehicle** in RViz 2.
 6.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 7.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
+
+### 7. 🎯 Use **CARLA PYTHONAPI example** scripts to launch another vehicle in the simulator and test the behavior of ego vehicle. 
+1.  Open a new terminal and Create a conda environment for running carla python example script with following command:
+
+    ```bash
+    
+    cd cd $HOME/CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2
+    conda env create -f conda_carla_env.yml
+    conda activate carla_37
+    cd $HOME/CARLA_PROJECT/CARLA_0.9.15/PythonAPI/examples
+    python3 manual_control.py --rolename vehicle
+    ```
+
+2.  A new pygame window appear to control the new vehicle in the simulator.
+3.  You can drive this car manually infront of the EGO VEHICLE and see how ego vehicle control its speed when a collision detected.
+4.  Also you can keep this vehicle infront of EGO VEHICLE and keep it in Autopilot mode (by pressing 'p' KEY), so that you can see the ego vehicle adjust its according to second vehicle.
+5.  Also you can manually drive second vehicle to craete a collision case and see how EGO vehicle react to it. 
