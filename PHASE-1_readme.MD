@@ -18,7 +18,7 @@
     Open a new terminal (terminal 1) and run the following command to start the CARLA server:
 
     ```bash
-    bash CARLA_PROJECT/CARLA_0.9.15/CarlaUE4.sh -prefernvidia
+    bash $HOME/CARLA_PROJECT/CARLA_0.9.15/CarlaUE4.sh -prefernvidia
     ```
 
 2.  **Source ROS2 HUMBLE.**
