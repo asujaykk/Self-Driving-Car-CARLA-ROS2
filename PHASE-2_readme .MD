@@ -149,3 +149,60 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
 3.  You can drive this car manually infront of the EGO VEHICLE and see how ego vehicle control its speed when a collision detected.
 4.  Also you can keep this vehicle infront of EGO VEHICLE and keep it in Autopilot mode (by pressing 'p' KEY), so that you can see the ego vehicle adjust its according to second vehicle.
 5.  Also you can manually drive second vehicle to craete a collision case and see how EGO vehicle react to it. 
+
+
+## RUNNING ALL ROS nodes together from a single terminal with one launch file.
+
+### 1. 🌍 Start CARLA server.
+1.  **Run the CARLA server.**
+    Open a new terminal (terminal 1) and run the following command to start the CARLA server:
+
+    ```bash
+    bash $HOME/CARLA_PROJECT/CARLA_0.9.15/CarlaUE4.sh -prefernvidia
+    ```
+### 2. 🚗 Spawn a vehicle and required nodes to run collision avoidance system.
+1.  Run a single launch file to run all above nodes together.
+    In terminal 2, run the following command in a new terminal (terminal 2):
+
+    ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    source $HOME/CARLA_PROJECT/ros2_bridge_ws/ros-bridge/install/setup.bash
+    export CARLA_ROOT=$HOME/CARLA_PROJECT/CARLA_0.9.15
+    export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla
+    source $HOME/CARLA_PROJECT/carla_ros2_ws/install/setup.bash
+    ros2 launch task_launch master_launch.py
+    ```
+2.  **Launch RViz 2** in a new terminal (terminal 7):
+
+    ```bash
+    conda deactivate
+    source /opt/ros/humble/setup.bash
+    rviz2
+    ```
+
+3.  Select the `carla_road_network` topic to **visualize the road network** in RViz 2.
+4.  Select the `carla/hero/marker` topic to **visualize the vehicle** in RViz 2.
+5.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
+6.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
+
+### 3. 🎯 Use **CARLA pythonapi example** scripts to launch another vehicle in the simulator and test the behaviour of ego vehicle. 
+1.  Open a new terminal and create a conda environment for running carla python example script with following command:
+
+    ```bash
+    cd cd $HOME/CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2
+    conda env create -f conda_carla_env.yml
+    ```
+2.  A new conda environment will be created with name 'carla_37'
+3.  Then activate this environment, and run the 'manual_control.py' script file from CARLA executable folder.
+
+    ```bash
+    conda activate carla_37
+    cd $HOME/CARLA_PROJECT/CARLA_0.9.15/PythonAPI/examples
+    python3 manual_control.py --rolename vehicle
+    ```
+
+2.  A new pygame window appear to control the new vehicle in the simulator.
+3.  You can drive this car manually infront of the EGO VEHICLE and see how ego vehicle control its speed when a collision detected.
+4.  Also you can keep this vehicle infront of EGO VEHICLE and keep it in Autopilot mode (by pressing 'p' KEY), so that you can see the ego vehicle adjust its according to second vehicle.
+5.  Also you can manually drive second vehicle to craete a collision case and see how EGO vehicle react to it. 
