@@ -21,7 +21,7 @@ def generate_launch_description():
         Node(
             package='collision_avoidance_system',
             executable='collision_monitor_control',
-            name='Automatic_emergency_breaking',
+            name='collision_monitor_control',
             namespace='SELF_DRIVE_stack',
             output='screen'
         ),

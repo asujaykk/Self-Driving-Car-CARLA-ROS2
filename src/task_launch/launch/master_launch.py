@@ -11,6 +11,12 @@ def generate_launch_description():
     rob_pkg_launch_dir = os.path.join(get_package_share_directory('carla_ros_bridge'))
     wp_pkg_launch_dir = os.path.join(get_package_share_directory('carla_waypoint_publisher'))
     master_launch_dir =  os.path.join(get_package_share_directory('task_launch'), 'launch')
+    
+    # Get the HOME directory
+    home_dir = os.environ["HOME"]
+
+    # Construct full path to your JSON file
+    vehicle_def_file_path = os.path.join(home_dir, "CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2/car_definition_file.json")
 
 
     ego_vehicle_launch = IncludeLaunchDescription(
@@ -18,7 +24,7 @@ def generate_launch_description():
              os.path.join(rob_pkg_launch_dir,'carla_ros_bridge_with_example_ego_vehicle.launch.py')
         ),
         launch_arguments={
-            'objects_definition_file': '$HOME/CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2/car_definition_file.json',
+            'objects_definition_file': vehicle_def_file_path,
         }.items()
     )
 
