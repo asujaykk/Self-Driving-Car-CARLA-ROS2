@@ -24,7 +24,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
     git clone https://github.com/asujaykk/Self-Driving-Car-CARLA-ROS2.git
 
 
-Open a new terminal and Build the package and source it:
+ Build the package and source it:
 
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
