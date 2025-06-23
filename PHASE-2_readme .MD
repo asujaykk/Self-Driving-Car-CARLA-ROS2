@@ -14,10 +14,10 @@
 ### Clone this repository to your 'CARLA_PROJECT/carla_ros2_ws/src' folder*:
 Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, then remove **Self-Driving-Car-CARLA-ROS2** folder and freshly clone it:
 
-   conda deactivate
-   cd $HOME/CARLA_PROJECT/carla_ros2_ws/src
-   rm -rf Self-Driving-Car-CARLA-ROS2
-   git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git 
+    conda deactivate
+    cd $HOME/CARLA_PROJECT/carla_ros2_ws/src
+    rm -rf Self-Driving-Car-CARLA-ROS2
+    git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git 
 
 
 Open a new terminal and Build the package and source it:
