@@ -29,6 +29,7 @@ Open a new terminal and Build the package and source it:
     colcon build
     source install/setup.bash
     ```
+
 ### 1. 🌍 Start CARLA server.
 1.  **Run the CARLA server.**
     Open a new terminal (terminal 1) and run the following command to start the CARLA server:
