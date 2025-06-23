@@ -11,7 +11,24 @@
 4.  Use a **controller** to control the vehicle to follow the route.
 5.  Use **Navigation HMI** to select the destination location on the map.
 
+### Clone this repository to your 'CARLA_PROJECT/carla_ros2_ws/src' folder*:
+   
+    Open a new terminal and navigate to 'CARLA_PROJECT/carla_ros2_ws/src' folder, then remove **Self-Driving-Car-CARLA-ROS2** folder and freshly clone it
+    
+   ```bash
+    conda deactivate
+    cd $HOME/CARLA_PROJECT/carla_ros2_ws/src
+    git clone git@github.com:asujaykk/Self-Driving-Car-CARLA-ROS2.git
+    
+    ```
+    Open a new terminal and Build the package and source it:
 
+    ```bash
+    conda deactivate
+    cd $HOME/CARLA_PROJECT/carla_ros2_ws
+    colcon build
+    source install/setup.bash
+    ```
 
 ### 1. 🌍 Start CARLA server.
 1.  **Run the CARLA server.**
