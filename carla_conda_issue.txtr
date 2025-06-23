@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/71010343/cannot-load-swrast-and-iris-drivers-in-fedora-35/72200748#72200748
+
+
+solution: 
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+activate conda env
+run py files
