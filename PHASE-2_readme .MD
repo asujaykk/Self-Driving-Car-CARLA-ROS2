@@ -12,7 +12,7 @@
 5.  Use **Navigation HMI** to select the destination location on the map.
 
 ### Clone this repository to your 'CARLA_PROJECT/carla_ros2_ws/src' folder*:
-   Open a new terminal and navigate to 'CARLA_PROJECT/carla_ros2_ws/src' folder, then remove **Self-Driving-Car-CARLA-ROS2** folder and freshly clone it
+Open a new terminal and navigate to 'CARLA_PROJECT/carla_ros2_ws/src' folder, then remove **Self-Driving-Car-CARLA-ROS2** folder and freshly clone it
     
    ```bash
     conda deactivate
