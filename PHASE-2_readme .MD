@@ -133,9 +133,13 @@ Open a new terminal and Build the package and source it:
 1.  Open a new terminal and create a conda environment for running carla python example script with following command:
 
     ```bash
-    
     cd cd $HOME/CARLA_PROJECT/carla_ros2_ws/src/Self-Driving-Car-CARLA-ROS2
     conda env create -f conda_carla_env.yml
+    ```
+2.  A new conda environment will be created with name 'carla_37'
+3.  Then activate this environment, and run the 'manual_control.py' script file from CARLA executable folder.
+
+    ```bash
     conda activate carla_37
     cd $HOME/CARLA_PROJECT/CARLA_0.9.15/PythonAPI/examples
     python3 manual_control.py --rolename vehicle
