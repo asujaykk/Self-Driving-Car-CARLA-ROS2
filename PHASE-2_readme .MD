@@ -27,6 +27,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
  Build the package and source it:
 
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
+    colcon build --clean
     colcon build
     source install/setup.bash
 
