@@ -27,6 +27,7 @@ Open a new terminal and Build the package and source it:
 
 
     conda deactivate
+    source /opt/ros/humble/setup.bash
     cd $HOME/CARLA_PROJECT/carla_ros2_ws
     colcon build
     source install/setup.bash
