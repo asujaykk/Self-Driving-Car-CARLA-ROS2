@@ -132,7 +132,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
     ros2 launch task_launch master_launch.py
     ```
 
-### 6. 🎯 Use Rviz2 to select the destination location on the map.
+### 7. 🎯 Use Rviz2 to select the destination location on the map.
 1.  **Launch RViz 2** in a new terminal (terminal 8):
 
     ```bash
@@ -146,7 +146,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
 4.  Now choose the **"Goal Pose" option** to select the destination point in the road network.
 5.  Once you select the goal pose, you can **see the new route created by the waypoint publisher** on the map.
 
-### 3. 🎯 Use **CARLA pythonapi example** scripts to launch another vehicle in the simulator and test the behaviour of ego vehicle. 
+### 8. 🎯 Use **CARLA pythonapi example** scripts to launch another vehicle in the simulator and test the behaviour of ego vehicle. 
 1.  Open a new terminal and create a conda environment for running carla python example script with following command:
 
     ```bash
