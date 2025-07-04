@@ -168,3 +168,7 @@ Open a new terminal and navigate to `CARLA_PROJECT/carla_ros2_ws/src` folder, th
 3.  You can drive this car manually infront of the EGO VEHICLE and see how ego vehicle control its speed when a collision detected.
 4.  Also you can keep this vehicle infront of EGO VEHICLE and keep it in Autopilot mode (by pressing 'p' KEY), so that you can see the ego vehicle adjust its according to second vehicle.
 5.  Also you can manually drive second vehicle to craete a collision case and see how EGO vehicle react to it. 
+
+### Video tutorial
+https://youtu.be/HqB76WQdf8g
+
