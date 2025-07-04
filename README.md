@@ -133,4 +133,5 @@ https://youtu.be/jFORY41LDHo?si=h1kVquHgi4Zu2OJq
 Please follow procedure mentioned in [PHASE-2_readme.MD](https://github.com/asujaykk/Self-Driving-Car-CARLA-ROS2/blob/main/PHASE-2_readme%20.MD)
 
 ### Video tutorial
+https://youtu.be/HqB76WQdf8g
 
