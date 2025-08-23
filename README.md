@@ -38,7 +38,7 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 
 ## ⚠️ Prerequisite
 1.  A PC with **Ubuntu 22.04 OS** installed (with dedicated graphics).
-2.  Basic software packages required in the root for whole project, install them with below commands
+2.  Basic software packages required in the root for whole project, Open a new terminal and install them with below commands.
 
         sudo apt install python3-pip
         pip install shapely
