@@ -38,10 +38,21 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 
 ## ⚠️ Prerequisite
 1.  A PC with **Ubuntu 22.04 OS** installed (with dedicated graphics).
-2.  **ROS2 Humble** installed.
+2.  Basic software packages required in the root for whole project, install them with below commands
+
+        sudo apt install python3-pip
+        pip install shapely
+        pip install opencv-python
+        pip install carla
+        pip install transforms3d
+        pip install "numpy<2.0"
+        pip install networkx
+        pip install pygame
+    
+4.  **ROS2 Humble** installed.
 
     Follow the official page of ROS2 for installation: [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
-4.  **CARLA 0.9.15.0 simulator** installed.
+5.  **CARLA 0.9.15.0 simulator** installed.
 
     create A folder named 'CARLA_PROJECT' for all data
     
