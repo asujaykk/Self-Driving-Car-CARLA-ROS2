@@ -73,7 +73,8 @@ Also, we can **control the vehicle** with the **API/ROS bridge**.
 
            conda deactivate
            source /opt/ros/humble/setup.bash
-           rosdep update
+           sudo rosdep init
+           sudo rosdep update
            rosdep install --from-paths src --ignore-src -r
     Build the ROS bridge workspace using colcon.
   
